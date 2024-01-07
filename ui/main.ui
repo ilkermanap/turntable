@@ -70,6 +70,13 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -96,12 +103,28 @@
    <slot>startCapture()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>756</x>
+     <x>671</x>
      <y>21</y>
     </hint>
     <hint type="destinationlabel">
      <x>673</x>
      <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Turntable</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>794</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>804</x>
+     <y>5</y>
     </hint>
    </hints>
   </connection>

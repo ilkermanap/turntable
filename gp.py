@@ -1,16 +1,17 @@
-import logging
-import locale
 import os
 import subprocess
 import sys
-
+import locale, logging
 import gphoto2 as gp
 
 def main():
     locale.setlocale(locale.LC_ALL, '')
     logging.basicConfig(
-        format='%(levelname)s: %(name)s: %(message)s', level=logging.WARNING)
+    format='%(levelname)s: %(name)s: %(message)s', level=logging.WARNING)
     callback_obj = gp.check_result(gp.use_python_logging())
+
+
+    
     camera = gp.Camera()
     camera.init()
     print('Capturing image')
