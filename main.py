@@ -1,8 +1,6 @@
 from arduino import StepperMotor, Arduino
 import sys
 from video import ImageCapture, Video
-vid = Video()
-sys.exit()
 
 capture = ImageCapture()
 
