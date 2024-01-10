@@ -20,33 +20,9 @@
       <enum>QLayout::SetMinimumSize</enum>
      </property>
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QPushButton" name="btnStart">
        <property name="text">
-        <string>Arduino serial port</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="cmbUSB">
-       <property name="minimumSize">
-        <size>
-         <width>150</width>
-         <height>0</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Video file name</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="editFilename">
-       <property name="text">
-        <string>video.avi</string>
+        <string>Start</string>
        </property>
       </widget>
      </item>
@@ -64,14 +40,21 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="btnStart">
+      <widget class="QLabel" name="lblStatus">
        <property name="text">
-        <string>Start</string>
+        <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btnConfig">
+       <property name="text">
+        <string>Configure</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose">
        <property name="text">
         <string>Exit</string>
        </property>
@@ -103,7 +86,7 @@
    <slot>startCapture()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>671</x>
+     <x>38</x>
      <y>21</y>
     </hint>
     <hint type="destinationlabel">
@@ -113,7 +96,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>btnClose</sender>
    <signal>clicked()</signal>
    <receiver>Turntable</receiver>
    <slot>close()</slot>
@@ -128,8 +111,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnConfig</sender>
+   <signal>clicked()</signal>
+   <receiver>Turntable</receiver>
+   <slot>configure()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>654</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>startCapture()</slot>
+  <slot>configure()</slot>
  </slots>
 </ui>
